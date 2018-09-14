@@ -1,5 +1,7 @@
 const express = require('express');
+const database = require('../dataaccess/mongoDb/mongoDb')
 var app = express();
+database.initializeMongo();
 
 require('../routes/expenses')(app);
 

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose'), Schema = mongoose.Schema;;
-const DATABASE_CONNECTION = 'mongodb://mongo/dailyExpenses';
+const DATABASE_CONNECTION = 'mongodb://127.0.0.1:27017/dailyExpenses';
 
 var ExpenseSchema = new Schema({
     description   : { type: String, required: true }
@@ -17,3 +17,5 @@ exports.initializeMongo = function(){
         console.log('an error has happening when connect with mongoDB');
     })
 }
+
+module.exports = Expense;
